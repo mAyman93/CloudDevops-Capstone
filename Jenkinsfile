@@ -20,6 +20,7 @@ pipeline {
 
 		stage('Deploy to AWS EKS') {
 			steps {
+				sh "aws eks --region eu-west-2 update-kubeconfig --name capstone"
 				sh "kubectl run capstone  --image=jenkins.dkr.ecr.us-west-2.amazonaws.com/capstone:latest"
 			}
 		}
