@@ -1,0 +1,1 @@
+eksctl create cluster --name capostone --region us-west-2 --fargate
