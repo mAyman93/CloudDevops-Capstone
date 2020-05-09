@@ -11,10 +11,10 @@ pipeline {
 		stage('Building image') {
 			steps {
 				echo 'Building Docker image...'
-				sh "docker login -u mayman93 -p ${env.dockerPassword}"
-				sh "docker build -t ${env.dockerUsername}/capstone ."
-				sh "docker tag capstone ${env.dockerUsername}/capstone"
-				sh "docker push ${env.dockerUsername}/capstone"
+				sh "docker login -u mayman93 -p Mm.123123"
+				sh "docker build -t mayman93/capstone ."
+				sh "docker tag capstone mayman93/capstone"
+				sh "docker push mayman93/capstone"
 			}
 			
 		}
