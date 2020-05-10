@@ -20,7 +20,7 @@ pipeline {
 
 		stage('Deploy to AWS EKS') {
 			steps {
-				sh "kubectl run capostone  --image=jenkins.dkr.ecr.us-west-2.amazonaws.com/capostone:latest update-kubeconfig"
+				sh "kubectl run capostone  --image=jenkins.dkr.ecr.us-west-2.amazonaws.com/capostone:latest --kubeconfig ~/.kube/config"
 			}
 		}
 	}
