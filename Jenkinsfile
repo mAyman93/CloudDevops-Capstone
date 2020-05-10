@@ -20,7 +20,10 @@ pipeline {
 
 		stage('Deploy to AWS EKS') {
 			steps {
-				sh "kubectl run capostone  --image=jenkins.dkr.ecr.us-west-2.amazonaws.com/capostone:latest --kubeconfig=kubeConfig.yaml"
+				withAWS(credentials: 'aws-credentials', region: 'us-west-2') {
+					sh "kubectl run capostone  --image=jenkins.dkr.ecr.us-west-2.amazonaws.com/capostone:latest --kubeconfig=kubeConfig.yaml"
+				}
+				
 			}
 		}
 	}
