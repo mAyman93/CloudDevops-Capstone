@@ -6,8 +6,8 @@ A Blue/Green deployment is a way of accomplishing a zero-downtime upgrade to an 
 
 ###### Basic Flow:
 
-1- Start with already deployed containers (Deployment) and service.
-2- Deploy new deployment
-3- Issue a health check
-4- If health check passes, update load balancer and remove old deployment
-5- If health check fails, stop and send Slack alert
+1- Start with already deployed containers (Deployment) and service.\n
+2- Deploy new deployment\n
+3- Issue a health check\n
+4- If health check passes, update load balancer and remove old deployment\n
+5- If health check fails, stop and send Slack alert\n
